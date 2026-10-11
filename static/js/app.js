@@ -234,8 +234,10 @@
   /* -------------------------------------------------------- Autovervollständigung */
 
   function suggestionLabel(location) {
-    const place = location.place ? `${location.place}, ` : "";
-    return `${place}${location.name}`;
+    if (!location) return "";
+    const name = location.name || location.full_name || "";
+    // Deutsche Schreibweise: "Essen Hbf" statt "Essen, Hbf"
+    return location.place ? `${location.place} ${name}`.trim() : name;
   }
 
   function setFieldValue(kind, location) {
@@ -569,7 +571,7 @@
       : "";
     return `<div class="endpoint">
         <span class="time${delayed ? " is-delayed" : ""}">${esc(point.time || "–")}</span>
-        <span class="place">${esc(label)}: <strong>${esc(point.full_name || point.name || "")}</strong>${
+        <span class="place">${esc(label)}: <strong>${esc(point.name || point.full_name || "")}</strong>${
           point.platform ? ` · Gleis/Steig ${esc(point.platform)}` : ""
         }</span>
         ${estimated}
@@ -591,7 +593,7 @@
           .join(" · ");
         return `<li${stop.cancelled ? ' class="is-cancelled"' : ""}>
             <span class="s-time${delayed ? " is-delayed" : ""}">${esc(time)}</span>
-            <span class="s-name">${esc(stop.full_name || stop.name)}${
+            <span class="s-name">${esc(stop.name || stop.full_name)}${
               stop.cancelled ? " · fällt aus" : ""
             }</span>
             <span class="s-meta">${esc(meta)}</span>
@@ -702,7 +704,15 @@
 
     el.resultsBody.innerHTML = `${notesMarkup}
       <div class="journey-list">
-        ${journeys.map((journey, index) => summaryMarkup(journey, index)).join("")}
+        ${journeys
+          .map(
+            (journey, index) =>
+              `<article class="journey-card" style="animation-delay:${index * 70}ms">${summaryMarkup(
+                journey,
+                index
+              )}</article>`
+          )
+          .join("")}
       </div>`;
 
     state.lastJourneys = journeys;
@@ -966,5 +976,11 @@
     window.setInterval(checkHealth, 300000);
   }
 
-  document.addEventListener("DOMContentLoaded", init);
+  // Sowohl bei "defer"-Skripten (DOM bereits geparst) als auch bei früher
+  // Ausführung korrekt starten – und garantiert nur einmal.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else {
+    init();
+  }
 })();

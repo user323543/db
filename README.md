@@ -223,6 +223,20 @@ python -m pytest tests/ -q
 
 Es findet **kein** echter Netzwerkaufruf statt.
 
+### Optional: Frontend-Integrationstest (Node.js)
+
+Zusätzlich prüft ein jsdom-Test das echte Rendering (`index.html` +
+`static/js/app.js`) gegen echte Backend-Antworten: Vorschlagslisten,
+Tastaturauswahl, Ergebniskarten, Verspätungen, Echtzeit-/Fahrplan-Kennzeichnung,
+aufklappbare Haltestellenfolge und der Fehlerzustand bei nicht erreichbarer
+Schnittstelle.
+
+```bash
+cd tests/frontend
+npm install          # benötigt Node.js (nur jsdom)
+python run.py        # startet Fake-EFA + Flask-Testclient und ruft node auf
+```
+
 ---
 
 ## 7. Konfiguration (Umgebungsvariablen)
