@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Umgebung / Geheimnisse (NRW Route braucht keine Zugangsdaten)
+.env
+.env.*
+
+# Editor / Betriebssystem
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

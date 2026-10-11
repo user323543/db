@@ -1,0 +1,202 @@
+{
+  "_comment": "SYNTHETISCHES Test-Fixture (keine echten Fahrplandaten). Struktur und Feldnamen entsprechen der EFA-rapidJSON-Antwort, wie sie in scripts/efa-api-notes.md dokumentiert ist. Zeitstempel sind UTC (Z-Suffix): 2026-07-15 ist Sommerzeit, also Europe/Berlin = UTC+2.",
+  "version": "10.5.1.4",
+  "systemMessages": [],
+  "journeys": [
+    {
+      "interchanges": 0,
+      "isAdditional": false,
+      "legs": [
+        {
+          "duration": 2220,
+          "isRealtimeControlled": true,
+          "origin": {
+            "id": "de:05113:9289",
+            "name": "Essen, Hbf",
+            "disassembledName": "Essen Hbf",
+            "type": "stop",
+            "coord": [51.4516, 7.0137],
+            "departureTimePlanned": "2026-07-15T06:35:00Z",
+            "departureTimeEstimated": "2026-07-15T06:37:00Z",
+            "properties": { "stopId": "20009289", "platformName": "3" },
+            "parent": { "id": "placeID:5113000:1", "name": "Essen", "type": "locality" }
+          },
+          "destination": {
+            "id": "de:05913:1702",
+            "name": "Dortmund, Hbf",
+            "disassembledName": "Dortmund Hbf",
+            "type": "stop",
+            "coord": [51.5178, 7.4592],
+            "arrivalTimePlanned": "2026-07-15T07:12:00Z",
+            "arrivalTimeEstimated": "2026-07-15T07:14:00Z",
+            "departureTimePlanned": "2026-07-15T07:12:00Z",
+            "departureTimeEstimated": "2026-07-15T07:14:00Z",
+            "properties": { "stopId": "20001702", "platformName": "21" },
+            "parent": { "id": "placeID:5913000:1", "name": "Dortmund", "type": "locality" }
+          },
+          "transportation": {
+            "id": "vrr:25001: :H",
+            "name": "S 1",
+            "number": "S1",
+            "disassembledName": "S1",
+            "product": { "class": 1, "name": "S-Bahn", "icon": "S" },
+            "operator": { "code": "DBR", "name": "DB Regio AG" },
+            "destination": { "id": "de:05913:1702", "name": "Dortmund Hbf" },
+            "properties": { "tripCode": 4711, "trainNumber": "25001", "trainType": "S" }
+          },
+          "stopSequence": [
+            {
+              "type": "platform",
+              "name": "Essen Hbf",
+              "properties": { "platformName": "3" },
+              "departureTimePlanned": "2026-07-15T06:35:00Z",
+              "departureTimeEstimated": "2026-07-15T06:37:00Z",
+              "parent": {
+                "type": "stop",
+                "id": "de:05113:9289",
+                "name": "Essen, Hbf",
+                "disassembledName": "Essen Hbf",
+                "properties": { "stopId": "20009289" },
+                "parent": { "type": "locality", "name": "Essen" }
+              }
+            },
+            {
+              "type": "platform",
+              "name": "Bochum Hbf",
+              "properties": { "platformName": "5" },
+              "arrivalTimePlanned": "2026-07-15T06:52:00Z",
+              "arrivalTimeEstimated": "2026-07-15T06:54:00Z",
+              "departureTimePlanned": "2026-07-15T06:53:00Z",
+              "departureTimeEstimated": "2026-07-15T06:55:00Z",
+              "parent": {
+                "type": "stop",
+                "id": "de:05911:1032",
+                "name": "Bochum, Hbf",
+                "disassembledName": "Bochum Hbf",
+                "properties": { "stopId": "20001032" },
+                "parent": { "type": "locality", "name": "Bochum" }
+              }
+            },
+            {
+              "type": "stop",
+              "id": "de:05913:1702",
+              "name": "Dortmund, Hbf",
+              "disassembledName": "Dortmund Hbf",
+              "properties": { "stopId": "20001702", "platformName": "21" },
+              "arrivalTimePlanned": "2026-07-15T07:12:00Z",
+              "arrivalTimeEstimated": "2026-07-15T07:14:00Z",
+              "parent": { "type": "locality", "name": "Dortmund" }
+            }
+          ],
+          "infos": []
+        }
+      ]
+    },
+    {
+      "interchanges": 1,
+      "isAdditional": false,
+      "legs": [
+        {
+          "duration": 780,
+          "isRealtimeControlled": false,
+          "origin": {
+            "id": "de:05113:9289",
+            "name": "Essen, Hbf",
+            "disassembledName": "Essen Hbf",
+            "type": "stop",
+            "departureTimePlanned": "2026-07-15T06:52:00Z",
+            "properties": { "stopId": "20009289", "platformName": "10" },
+            "parent": { "id": "placeID:5113000:1", "name": "Essen", "type": "locality" }
+          },
+          "destination": {
+            "id": "de:05911:1032",
+            "name": "Bochum, Hbf",
+            "disassembledName": "Bochum Hbf",
+            "type": "stop",
+            "arrivalTimePlanned": "2026-07-15T07:05:00Z",
+            "properties": { "stopId": "20001032", "platformName": "3" },
+            "parent": { "id": "placeID:5911000:1", "name": "Bochum", "type": "locality" }
+          },
+          "transportation": {
+            "id": "vrr:11001: :H",
+            "name": "RE 1",
+            "number": "RE1",
+            "disassembledName": "RE1",
+            "product": { "class": 0, "name": "Regionalzug", "icon": "Z" },
+            "operator": { "code": "DBR", "name": "DB Regio AG" },
+            "destination": { "id": "de:05111:1001", "name": "Aachen Hbf" },
+            "properties": { "tripCode": 815, "trainNumber": "11001", "trainType": "RE" }
+          },
+          "stopSequence": [],
+          "infos": [
+            {
+              "type": "warning",
+              "title": "Bauarbeiten",
+              "infoLinks": [
+                {
+                  "title": "Bauarbeiten im Bereich Bochum",
+                  "content": "Bis 20.07. fahren einzelne Züge <b>zu geänderten Zeiten</b>."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "duration": 240,
+          "isRealtimeControlled": false,
+          "origin": {
+            "type": "stop",
+            "id": "de:05911:1032",
+            "name": "Bochum, Hbf",
+            "disassembledName": "Bochum Hbf",
+            "departureTimePlanned": "2026-07-15T07:05:00Z",
+            "properties": { "stopId": "20001032" }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "de:05911:1032",
+            "name": "Bochum, Hbf",
+            "disassembledName": "Bochum Hbf",
+            "arrivalTimePlanned": "2026-07-15T07:09:00Z",
+            "properties": { "stopId": "20001032" }
+          },
+          "infos": []
+        },
+        {
+          "duration": 1740,
+          "isRealtimeControlled": false,
+          "origin": {
+            "id": "de:05911:1032",
+            "name": "Bochum, Hbf",
+            "disassembledName": "Bochum Hbf",
+            "type": "stop",
+            "departureTimePlanned": "2026-07-15T07:09:00Z",
+            "properties": { "stopId": "20001032", "platformName": "2" },
+            "parent": { "id": "placeID:5911000:1", "name": "Bochum", "type": "locality" }
+          },
+          "destination": {
+            "id": "de:05913:1702",
+            "name": "Dortmund, Hbf",
+            "disassembledName": "Dortmund Hbf",
+            "type": "stop",
+            "departureTimePlanned": "2026-07-15T07:38:00Z",
+            "properties": { "stopId": "20001702", "platformName": "4" },
+            "parent": { "id": "placeID:5913000:1", "name": "Dortmund", "type": "locality" }
+          },
+          "transportation": {
+            "id": "vrr:20980: :H",
+            "name": "U 35",
+            "number": "U35",
+            "disassembledName": "U35",
+            "product": { "class": 2, "name": "U-Bahn", "icon": "U" },
+            "operator": { "code": "BOGESTRA", "name": "Bogestra" },
+            "destination": { "id": "de:05913:1702", "name": "Dortmund Hbf" },
+            "properties": { "tripCode": 20980, "lineId": "vrr:20980: :H" }
+          },
+          "stopSequence": [],
+          "infos": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_comment": "SYNTHETISCHES Test-Fixture: EFA-Antwort ohne Verbindungen inkl. systemMessages-Fehler.",
+  "version": "10.5.1.4",
+  "systemMessages": [
+    {
+      "code": -8010,
+      "error": "no journeys found for the given date and time",
+      "type": "error",
+      "module": "BROKER"
+    }
+  ],
+  "journeys": []
+}
