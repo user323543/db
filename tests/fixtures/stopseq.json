@@ -1,0 +1,39 @@
+{
+  "_comment": "SYNTHETISCHES Test-Fixture für XML_STOPSEQCOORD_REQUEST (Haltestellenfolge eines Teilwegs).",
+  "version": "10.5.1.4",
+  "systemMessages": [],
+  "locationSequence": [
+    {
+      "type": "stop",
+      "id": "de:05113:9289",
+      "name": "Essen, Hbf",
+      "disassembledName": "Essen Hbf",
+      "properties": { "stopId": "20009289", "platformName": "3" },
+      "departureTimePlanned": "2026-07-15T06:35:00Z",
+      "departureTimeEstimated": "2026-07-15T06:37:00Z",
+      "parent": { "type": "locality", "name": "Essen" }
+    },
+    {
+      "type": "stop",
+      "id": "de:05911:1032",
+      "name": "Bochum, Hbf",
+      "disassembledName": "Bochum Hbf",
+      "properties": { "stopId": "20001032", "platformName": "5" },
+      "arrivalTimePlanned": "2026-07-15T06:52:00Z",
+      "arrivalTimeEstimated": "2026-07-15T06:54:00Z",
+      "departureTimePlanned": "2026-07-15T06:53:00Z",
+      "departureTimeEstimated": "2026-07-15T06:55:00Z",
+      "parent": { "type": "locality", "name": "Bochum" }
+    },
+    {
+      "type": "stop",
+      "id": "de:05913:1702",
+      "name": "Dortmund, Hbf",
+      "disassembledName": "Dortmund Hbf",
+      "properties": { "stopId": "20001702", "platformName": "21" },
+      "arrivalTimePlanned": "2026-07-15T07:12:00Z",
+      "arrivalTimeEstimated": "2026-07-15T07:14:00Z",
+      "parent": { "type": "locality", "name": "Dortmund" }
+    }
+  ]
+}

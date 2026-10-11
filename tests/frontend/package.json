@@ -1,0 +1,11 @@
+{
+  "name": "nrw-route-frontend-tests",
+  "private": true,
+  "description": "Optionaler jsdom-Integrationstest für das NRW-Route-Frontend",
+  "scripts": {
+    "test": "node render.test.js bundle.json"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}

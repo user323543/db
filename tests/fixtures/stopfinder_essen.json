@@ -1,0 +1,66 @@
+{
+  "version": "10.5.1.4",
+  "systemMessages": [],
+  "locations": [
+    {
+      "id": "de:05113:9289",
+      "isGlobalId": true,
+      "name": "Essen, Hbf",
+      "disassembledName": "Hbf",
+      "type": "stop",
+      "matchQuality": 1000,
+      "isBest": true,
+      "coord": [51.4516, 7.0137],
+      "productClasses": [0, 1, 2, 3, 4, 5],
+      "parent": {
+        "id": "placeID:5113000:1",
+        "name": "Essen",
+        "type": "locality"
+      },
+      "properties": {
+        "stopId": "20009289",
+        "mainLocality": "Essen"
+      }
+    },
+    {
+      "id": "de:05113:9333",
+      "isGlobalId": true,
+      "name": "Essen, Hauptbahnhof (Haupteingang)",
+      "disassembledName": "Hauptbahnhof (Haupteingang)",
+      "type": "stop",
+      "matchQuality": 780,
+      "isBest": false,
+      "coord": [51.4523, 7.0141],
+      "productClasses": [3, 4],
+      "parent": {
+        "id": "placeID:5113000:1",
+        "name": "Essen",
+        "type": "locality"
+      },
+      "properties": {
+        "stopId": "20009333",
+        "mainLocality": "Essen"
+      }
+    },
+    {
+      "id": "de:05113:9411",
+      "isGlobalId": true,
+      "name": "Essen, Rathaus Essen",
+      "disassembledName": "Rathaus Essen",
+      "type": "stop",
+      "matchQuality": 640,
+      "isBest": false,
+      "coord": [51.4566, 7.0109],
+      "productClasses": [3, 4],
+      "parent": {
+        "id": "placeID:5113000:1",
+        "name": "Essen",
+        "type": "locality"
+      },
+      "properties": {
+        "stopId": "20009411",
+        "mainLocality": "Essen"
+      }
+    }
+  ]
+}
